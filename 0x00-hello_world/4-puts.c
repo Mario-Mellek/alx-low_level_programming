@@ -1,10 +1,13 @@
 #include <stdio.h>
 
-/*
- * prints "\"Programming is like building a multilingual puzzle"
+/**
+ * main - Main Entry-point
  *
- * The Function puts adds a new line by default
+ * The Function puts prints on a new line by default
+ *
+ * Return: int 0 End of the program
  */
+
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
