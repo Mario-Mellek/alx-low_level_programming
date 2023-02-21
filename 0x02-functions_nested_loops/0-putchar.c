@@ -1,13 +1,15 @@
-#include <stdio.h>
-/**
- * main - Prints prints _putchar,
- * followed by a new line.
- *
- * Return: returns 0
- */
+#include "main.h"
 
 int main(void)
 {
-	printf("_putchar\n");
+	char input[] = "_putchar";
+	int size = 0;
+
+	while (size <= 8)
+	{
+		_putchar(input[size]);
+		size++;
+	}
+	_putchar('\n');
 	return (0);
 }
