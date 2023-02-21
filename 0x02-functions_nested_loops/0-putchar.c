@@ -1,13 +1,7 @@
-#include <stdio.h>
-/**
- * main - Prints prints _putchar,
- * followed by a new line.
- *
- * Return: returns 0
- */
+#include <main.h>
 
 int main(void)
 {
-	printf("_putchar\n");
+	_putchar("_");
 	return (0);
 }
