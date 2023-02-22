@@ -17,13 +17,13 @@ void print_to_98(int n)
 	{
 		for (n = n; n > target; n--)
 		{
-			printf("%d", n);
+			printf("%d, ", n);
 		}
 	} else if (n < target)
 	{
 		for (n = n; n < target; n++)
 		{
-			printf("%d", n);
+			printf("%d, ", n);
 		}
 	}
 	printf("%d\n", target);
