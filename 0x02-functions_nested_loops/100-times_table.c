@@ -48,7 +48,7 @@ void condition(int n)
 					_putchar((iTableValue / 10) % 10 + '0');
 					_putchar(iTableValue % 10 + '0');
 				}
-				else if (iTableValue < 10)
+				else if (iTableValue < 10 && iTableValue !=0)
 				{
 					_putchar(',');
 					_putchar(' ');
