@@ -1,9 +1,29 @@
 #include "main.h"
 
+/**
+ * print_times_table - A function that prints
+ * the n times table, starting with 0.
+ * @n: Entry value
+ * Return: void
+ */
+
+void condition(int n);
+int iRow, iColumn, iTableValue;
+
 void print_times_table(int n)
 {
-	int iRow, iColumn, iTableValue;
-	
+	condition(n);
+
+}
+
+/**
+ * condition - A Helper function
+ * @n: Entry value
+ */
+
+void condition(int n)
+{
+
 	if (n >= 0 && n < 15)
 	{
 		for (iRow = 0; iRow <= n; iRow++)
@@ -40,7 +60,6 @@ void print_times_table(int n)
 				{
 					_putchar('0');
 				}
-
 			}
 			_putchar('\n');
 		}
