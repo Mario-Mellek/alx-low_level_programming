@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - Fizz-Buzz test
+ * Return: returns 0 when finished
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -29,4 +29,5 @@ void main(void)
 		}
 	}
 	putchar('\n');
+	return (0);
 }
