@@ -11,12 +11,6 @@ void print_number(int n)
 	unsigned int i;
 
 	i = n;
-	if (n < 0)
-	{
-		_putchar('-');
-		_putchar((i % 10) + '0');
-		i--;
-	}
 
 	if (i / 10)
 	{
