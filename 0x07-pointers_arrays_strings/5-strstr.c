@@ -16,10 +16,10 @@ char *_strstr(char *haystack, char *needle)
 	i = 0;
 	while (needle[i] != '\0')
 	{
-		pointer++;
 		i++;
 	}
 
+	pointer++;
 	while (*pointer != '\0')
 	{
 		for (j = 0; j < i; j++)
