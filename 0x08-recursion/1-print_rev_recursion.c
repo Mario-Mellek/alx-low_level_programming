@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _print_rev_recursion - A function that prints
@@ -9,17 +10,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	int size = 13;
-	char *letter = s + size;
-
-	if (*letter != '\n')
+	if (*s != '\0')
 	{
-		_putchar(*letter);
-		s--;
-		_print_rev_recursion(s);
-	}
-	else
-	{
-		_putchar('\n');
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 	}
 }
