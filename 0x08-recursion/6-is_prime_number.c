@@ -41,7 +41,7 @@ int isPrime(int num, int i)
 		if ((num % i) == 0)
 			return (0);
 
-		prime = isPrime(num, i-1);
+		prime = isPrime(num, i - 1);
 		return (prime);
 	}
 }
