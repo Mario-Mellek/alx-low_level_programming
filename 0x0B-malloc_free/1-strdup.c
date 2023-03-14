@@ -23,6 +23,7 @@ char *_strdup(char *str)
 	size = 0;
 	while (str[size] != '\0')
 		size++;
+	size += 1;
 
 	arrP = (char *)malloc(sizeof(char) * size);
 
