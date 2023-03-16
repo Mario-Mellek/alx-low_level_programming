@@ -1,16 +1,30 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * _strlen - A function that finds the length of a given string
+ * @len: pointer to the string to check
+ * Return: returns the length of the string
+ */
+
 int _strlen(char *len)
 {
 	int i = 0;
 
-	while(len[i] != '\0')
+	while (len[i] != '\0')
 	{
 		i++;
 	}
 	return (i);
 }
+
+/**
+ * string_nconcat - A function that concatenates two strings.
+ * @s1: pointer to the 1st string
+ * @s2: pointer to the 2nd string
+ * @n: the amount of bytes to concatenate
+ * Return: returns a pointer to the concatenated string
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -20,19 +34,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 		return (NULL);
-	else
-		len1 = _strlen(s1);
+	len1 = _strlen(s1);
 
 	if (s2 == NULL)
 		return (NULL);
-	else
-		len2 = _strlen(s2);
+	len2 = _strlen(s2);
 
 	if ((int) n > len2)
 		n = len2;
 
 	ptr = malloc(sizeof(*ptr) * (len1 + n + 1));
-	
+
 	if (ptr == NULL)
 		return (NULL);
 
