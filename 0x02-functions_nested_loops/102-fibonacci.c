@@ -1,6 +1,12 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - A program that prints the first 50 Fibonacci
+ * numbers, starting with 1 and 2, followed by a new line.
+ * Return: returns 0
+ */
+
+int main(void)
 {
 	int limit = 50, i;
 	int j = 1, temp;
