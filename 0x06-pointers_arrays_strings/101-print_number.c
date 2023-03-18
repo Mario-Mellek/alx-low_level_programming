@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_number - A function that prints an integer.
+ * @n: integer param
+ */
+
 void print_number(int n)
 {
 	if (n < 0)
