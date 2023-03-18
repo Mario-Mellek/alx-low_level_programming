@@ -11,12 +11,16 @@ int main(void)
 	long int limit = 20365011074;
 	long int j = 1, i, temp;
 
-	for (i = 0; i <= limit;)
+	for (i = 1; i <= limit;)
 	{
 		if (i == limit)
 		{
 			printf("%ld", i);
 			break;
+		}
+		if (j == 1)
+		{
+			j++;
 		}
 		printf("%ld, ", i);
 		temp = i + j;
