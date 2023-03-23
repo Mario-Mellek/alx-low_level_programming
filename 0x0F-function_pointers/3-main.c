@@ -2,7 +2,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (int argc, char **argv)
+/**
+ * main - performs simple operations
+ * @argc: number of arguments passed to the program
+ * @argv: array of arguments passed to the program
+ *
+ * Return: 0 if successful,
+ * 98 if incorrect number of arguments,
+ * 99 if invalid operator is passed,
+ * or 100 if division or modulo by zero is attempted
+ */
+
+
+int main(int argc, char **argv)
 {
 	int a, b;
 	int (*op_func)(int, int);
@@ -22,6 +34,6 @@ int main (int argc, char **argv)
 		printf("Error\n");
 		return (99);
 	}
-	printf ("%d\n", op_func(a, b));
+	printf("%d\n", op_func(a, b));
 	return (0);
 }
