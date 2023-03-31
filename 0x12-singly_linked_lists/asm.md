@@ -1,7 +1,7 @@
 ## 101-hello_holberton.asm explanation:
 
 - The `.data section` defines a string called `text` that contains the message
-`“Hello, Holberton”` followed by a newline character (0x0a) and a null terminator (0).
+`“Hello, Holberton”` followed by a newline character (0x0a).
 
 - The `.text section` defines the main function (entry point of the program)
 and calls the printf function to print the text string to the console.
