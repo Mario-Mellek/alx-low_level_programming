@@ -1,5 +1,5 @@
 section .data
-	text db 'Hello, Holberton', 0x0a 
+	text db 'Hello, Holberton', 0x0a, 0 
 
 section .text
 	extern printf
