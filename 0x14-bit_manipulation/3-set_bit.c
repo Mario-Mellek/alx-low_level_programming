@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * set_bit - A function that sets the value of
@@ -10,7 +11,7 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index < 64)
+	if (index <= sizeof(unsigned long int) * CHAR_BIT - 1)
 		return (*n |= (1 << index));
 	else
 		return (-1);
