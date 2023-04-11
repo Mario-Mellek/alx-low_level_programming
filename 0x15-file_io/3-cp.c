@@ -3,6 +3,13 @@
 
 #define BUF_SIZE 1024
 
+/**
+ * main - copies the content of a file to another file
+ * @argc: number of arguments passed to the program
+ * @argv: array of pointers to the arguments
+ * Return: 0 on success, otherwise an error code
+ */
+
 int main(int argc, char **argv)
 {
 	int fd_src, fd_dest;
@@ -12,7 +19,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	
+
 	fd_src = open(argv[1], O_RDONLY);
 	if (fd_src == -1)
 	{
@@ -29,15 +36,24 @@ int main(int argc, char **argv)
 	if (close(fd_src) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd%d\n", fd_src);
-		exit (100);
+		exit(100);
 	}
 	if (close(fd_dest) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd%d\n", fd_dest);
-		exit (100);
+		exit(100);
 	}
 	return (0);
 }
+
+/**
+ * copy_file - copies the contents of one file to another
+ * @fd_src: file descriptor of the source file
+ * @fd_dest: file descriptor of the destination file
+ * @argv: array of pointers to the arguments
+ * Return: void
+ */
+
 void copy_file(int fd_src, int fd_dest, char **argv)
 {
 	ssize_t n_read;
