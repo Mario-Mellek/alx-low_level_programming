@@ -33,6 +33,7 @@ void elfReader(char *fileName)
 {
 	FILE *fp;
 	Elf64_Ehdr header;
+	int i;
 
 	fp = fopen(fileName, "r");
 
@@ -42,14 +43,22 @@ void elfReader(char *fileName)
 		exit(98);
 	}
 	fread(&header, sizeof(Elf64_Ehdr), 1, fp);
-	printf("Magic: %s\n", header.e_ident);
-	printf("Class: %d\n", header.e_ident[EI_CLASS]);
-	printf("Data: %d\n", header.e_ident[EI_DATA]);
-	printf("Version: %d\n", header.e_version);
-	printf("OS/ABI: %d\n", header.e_ident[EI_OSABI]);
-	printf("ABI Version: %d\n", header.e_ident[EI_ABIVERSION]);
-	printf("Type: %d\n", header.e_type);
-	printf("Entry point address: %lx\n", header.e_entry);
+
+	printf("Magic:\t   ");
+	for (i = 0; i < EI_NIDENT; i++)
+		printf("%02x ", header.e_ident[i]);
+	printf("\n");
+	printf("  Class:\t\t\t\tELF%d\n", header.e_ident[EI_CLASS]);
+	printf("  Data:\t\t\t\t%s\n", header.e_ident[EI_DATA] == ELFDATA2LSB ?
+			"2's complement, little endian" :
+			"2's complement, big endian");
+	printf("  Version:\t\t\t\t%d (current)\n", header.e_version);
+	printf("  OS/ABI:\t\t\tUNIX - System V\n");
+	printf("  ABI Version:\t\t\t%d\n", header.e_ident[EI_ABIVERSION]);
+	printf("  Type:\t\t\t\t%s\n", header.e_type == ET_EXEC ?
+			"EXEC (Executable file)" :
+			"Not an executable file");
+	printf("  Entry point address:\t\t0x%lx\n", header.e_entry);
 
 	fclose(fp);
 }
