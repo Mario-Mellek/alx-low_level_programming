@@ -38,3 +38,4 @@
 0x18-dynamic_libraries/*.c
 0x18-dynamic_libraries/test
 0x18-dynamic_libraries/liball.so
+0x18-dynamic_libraries/Call_from_py
